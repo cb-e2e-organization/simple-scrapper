@@ -255,8 +255,8 @@ if __name__ == "__main__":
         input("Enter Behance url: ")
         or "https://www.behance.net/search/projects?search=ui+ux+case+study+figma+web+design&tracking_source=typeahead_search_suggestion&tools=442140153"
     )
-    email = input("Enter behance email: ") or "timothee.greyson@findours.com"
-    password = input("Enter behance password: ") or "ept0ZRP6gwm*tdr7tuz"
+    email = input("Enter behance email: ")
+    password = input("Enter behance password: ")
     only_unscrapped = input("Only unscrapped projects? (y/n): ") or "n"
     scrolls = int(input("Enter number of times to scroll: ") or 5)
 
