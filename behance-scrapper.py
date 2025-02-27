@@ -25,16 +25,6 @@ class BehanceScrapper:
         driver = webdriver.Chrome(options=options)
         return driver
 
-    @property
-    def _unscrapped_projects(self):
-        with open("unscrapped_projects.txt", "r") as f:
-            data = f.read().splitlines()
-        with open("unscrapped_projects.txt", "w") as f:
-            for line in set(data):
-                f.write(line + "\n")
-
-        return open("unscrapped_projects.txt", "r").read().splitlines()
-
     def login(self):
         self.driver.get(self.url)
 
@@ -74,7 +64,6 @@ class BehanceScrapper:
 if __name__ == "__main__":
     url = (
         input("Enter Behance url: ")
-        or "https://www.behance.net/search/projects?search=ui+ux+case+study+figma+web+design&tracking_source=typeahead_search_suggestion&tools=442140153"
     )
     email = input("Enter behance email: ")
     password = input("Enter behance password: ")
